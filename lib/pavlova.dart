@@ -7,42 +7,48 @@ class Pavlova extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Lustre_Activity 3'),
+        title: const Text('Rodrigo_Activity 3'),
       ),
-      body: Column(
-        crossAxisAlignment: CrossAxisAlignment.stretch,
-        children: [
-          Image.asset('assets/pavlova.jpg', fit: BoxFit.cover),
-          Padding(
-            padding: const EdgeInsets.all(16.0),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                const Text(
-                  'Strawberry Pavlova',
-                  style: TextStyle(
-                    fontSize: 24,
-                    fontWeight: FontWeight.bold,
-                  ),
-                ),
-                const SizedBox(height: 8),
-                const Text(
-                  'Pavlova is a meringue-based dessert named after the Russian ballerina Anna Pavlova.'
-                  ' Pavlova features a crisp crust and soft, light inside, topped with fruit and whipped cream.',
-                  style: TextStyle(
-                    fontSize: 14,
-                    color: Colors.black,
-                    height: 1.5,
-                  ),
-                ),
-                const SizedBox(height: 12),
-                Center(child: buildRatingRow()),
-                const SizedBox(height: 24),
-                buildRowTabs(),
-              ],
+      body: SingleChildScrollView(
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.stretch,
+          children: [
+            Image.asset(
+              'assets/pavlova.jpg',
+              width: double.infinity,
+              fit: BoxFit.cover,
             ),
-          ),
-        ],
+            Padding(
+              padding: const EdgeInsets.all(16.0),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  const Text(
+                    'Strawberry Pavlova',
+                    style: TextStyle(
+                      fontSize: 24,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                  const SizedBox(height: 8),
+                  const Text(
+                    'Pavlova is a meringue-based dessert named after the Russian ballerina Anna Pavlova.'
+                    ' Pavlova features a crisp crust and soft, light inside, topped with fruit and whipped cream.',
+                    style: TextStyle(
+                      fontSize: 14,
+                      color: Colors.black,
+                      height: 1.5,
+                    ),
+                  ),
+                  const SizedBox(height: 12),
+                  Center(child: buildRatingRow()),
+                  const SizedBox(height: 24),
+                  buildRowTabs(),
+                ],
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }
@@ -57,7 +63,6 @@ class Pavlova extends StatelessWidget {
             (index) => Icon(
               index < 3 ? Icons.star : Icons.star_border,
               color: Colors.yellow,
-              size: 20,
             ),
           ),
         ],

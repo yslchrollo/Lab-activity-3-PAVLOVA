@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:pavlova_act3_lustre/pavlova.dart';
+import 'package:pavlova_act3_rodrigo/pavlova.dart';
 
 void main() {
   runApp(const MyApp());

@@ -7,7 +7,7 @@
 
 import 'package:flutter_test/flutter_test.dart';
 
-import 'package:pavlova_act3_lustre/main.dart';
+import 'package:pavlova_act3_rodrigo/main.dart';
 
 void main() {
   testWidgets('Pavlova screen displays the rating row', (
@@ -15,7 +15,7 @@ void main() {
   ) async {
     await tester.pumpWidget(const MyApp());
 
-    expect(find.text('Lustre_Activity 3'), findsOneWidget);
+    expect(find.text('Rodrigo_Activity 3'), findsOneWidget);
     expect(find.text('90 Reviews'), findsOneWidget);
   });
 }
